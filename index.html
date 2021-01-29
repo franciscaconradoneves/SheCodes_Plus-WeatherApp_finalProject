@@ -8,10 +8,63 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <h1 class="app-title">My Weather</h1>
+        <div class="app-wrapper">
+            <div class="app">
+                <form class="mb-3">
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="search" placeholder="Change city" autocomplete="off" class="form-control">
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" value="Search" class="btn btn-outline-light">
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Current Location" class="btn btn-outline-light">
+                        </div>
+                    </div>
+                </form>
+                <div class="current-weather">
+                    <h1>City</h1>
+                    <ul>
+                        <li>
+                            Friday, 
+                        </li>
+                        <li>
+                            Clouds
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="clearfix weather-temperature">
+                                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" class="float-left">
+                                    <strong>14</strong
+                                        ><span class="units"
+                                        ><a href="#"class="active">ºC</a>|<a href="#">ºF</a></span>  
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <ul>
+                                <li>Humidity: <span>%</span></li>
+                                <li>Wind: <span>km/h</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row weather-forecast"></div>
+            </div>
+            <small>
+                <a href="https://github.com/franciscaconradoneves/SheCodes_Plus-WeatherApp_finalProject.git">Open-source code</a> by Francisca Conrado Neves
+            </small>
+        </div>
+    </div>
     <script src="src/index.js"></script>
 </body>
 </html>
