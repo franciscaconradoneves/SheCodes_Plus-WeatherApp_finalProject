@@ -18,16 +18,16 @@
         <h1 class="app-title">My Weather</h1>
         <div class="app-wrapper">
             <div class="app">
-                <form class="mb-3">
+                <form class="mb-3" id="weather-form">
                     <div class="row">
                         <div class="col-5">
-                            <input type="search" placeholder="Change city" autocomplete="off" class="form-control">
+                            <input type="search" id="city-input" placeholder="Change city" autocomplete="off" class="form-control">
                         </div>
                         <div class="col-2">
-                            <input type="submit" value="Search" class="btn btn-outline-light">
+                            <input type="submit" id="search" value="Search" class="btn btn-outline-light">
                         </div>
-                        <div class="col-3">
-                            <input type="submit" value="Current Location" class="btn btn-outline-light">
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-outline-light" id="current-location-button">Current Location</button>
                         </div>
                     </div>
                 </form>
@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="col-7">
                             <div class="clearfix weather-temperature">
-                                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" class="float-left">
+                                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" class="float-left" id="weather-icon">
                                     <strong id="currentTemperature"></strong
                                         ><span class="units"
                                         ><a href="#" class="active" id="celsius">ºC</a>|<a href="#" id="fahrenheit">ºF</a></span>  
