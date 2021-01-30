@@ -25,18 +25,18 @@ li:first-letter {
   }
 small{
     display: block;
-    color:#314453;
+    color:#330867;
     margin-top: 20px;
     text-align: center;
 }
 small a{
-    color: #314453 ;
+    color: #330867 ;
 }
 
 .app-title {
     font-size: 50px;
     font-family: 'Bree Serif', serif;
-    color: #314453;
+    color: #330867;
     text-align: center;
     margin: 25px;
 }
@@ -48,20 +48,19 @@ small a{
 
 .app {
     padding: 20px;
-    border: 1px solid  #d7d2cc;
+    border: 1px solid  #330867;
     border-radius: 5px;
-    background-color:  #d7d2cc;
+    background-color:  #330867;
 }
 .current-weather {
     padding: 20px;
     border-radius: 10px;
-    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  }
-
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
 .current-weather h1{
     font-size: 50px;
     font-family: 'Bree Serif', serif;
-    color: #314453;
+    color: #F5F4F4;
     font-size: 40px;
 }
 .weather-temperature img {

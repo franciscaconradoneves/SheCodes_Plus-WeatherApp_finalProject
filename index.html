@@ -32,28 +32,24 @@
                     </div>
                 </form>
                 <div class="current-weather">
-                    <h1>City</h1>
+                    <h1 id="city"></h1>
                     <ul>
-                        <li>
-                            Friday, 
-                        </li>
-                        <li>
-                            Clouds
-                        </li>
+                        <li>Last updated: <span id="day-information"></span></li>
+                        <li id="description"></li>
                     </ul>
                     <div class="row">
                         <div class="col-7">
                             <div class="clearfix weather-temperature">
                                 <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" class="float-left">
-                                    <strong>14</strong
+                                    <strong id="currentTemperature"></strong
                                         ><span class="units"
-                                        ><a href="#"class="active">ºC</a>|<a href="#">ºF</a></span>  
+                                        ><a href="#" class="active" id="celsius">ºC</a>|<a href="#" id="fahrenheit">ºF</a></span>  
                             </div>
                         </div>
                         <div class="col-4">
                             <ul>
-                                <li>Humidity: <span>%</span></li>
-                                <li>Wind: <span>km/h</span></li>
+                                <li>Humidity: <span id="humidity"></span>%</li>
+                                <li>Wind: <span id="wind"></span>km/h</li>
                             </ul>
                         </div>
                     </div>
