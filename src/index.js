@@ -37,9 +37,10 @@ function displayTemperature(response) {
     let dayElement = document.querySelector("#day-information")
     let weatherIconElement = document.querySelector("#weather-icon")
 
+    temperatureInCelsius = Math.round(response.data.main.temp)
 
     cityElement.innerHTML = response.data.name
-    temperatureElement.innerHTML = Math.round(response.data.main.temp)
+    temperatureElement.innerHTML = temperatureInCelsius
     descriptionElement.innerHTML = response.data.weather[0].description
     humidityElement.innerHTML = Math.round(response.data.main.humidity)
     windElement.innerHTML = Math.round(response.data.wind.speed)
@@ -81,11 +82,37 @@ function HandleCurrentLocation(event){
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
+function toFahrenheit(event){
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#currentTemperature");
+
+  currentTemperature.innerHTML = Math.round((temperatureInCelsius *9)/5 +32);
+
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+}
+
+function toCelsius(event){
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#currentTemperature");
+  currentTemperature.innerHTML = temperatureInCelsius;
+
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+}
 
 let weatherForm = document.querySelector("#weather-form");
 weatherForm.addEventListener("submit", weatherSubmit);
 
 let currentLocation = document.querySelector("#current-location-button");
-currentLocation.addEventListener("click", HandleCurrentLocation)
+currentLocation.addEventListener("click", HandleCurrentLocation);
+
+let temperatureInCelsius = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", toFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", toCelsius);
 
 search("Porto");
